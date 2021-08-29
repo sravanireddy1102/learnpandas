@@ -1,0 +1,22 @@
+import pandas as pd
+import csv
+df = pd.read_csv(r"C:\Users\akira\OneDrive\Desktop\weather_data.csv")
+print(df)
+#print(df.shape)
+#print(df.head())
+#print(df.tail(1))
+#print(df[2:5])
+print(df.columns)
+print(df.day)
+print(df[['event','day']])
+print(df['temperature'].max())
+print(df.describe())
+print(df[df.temperature>=32])
+print(df.index)
+df.set_index('day',inplace=True);
+print(df.loc['1/3/2017'])
+df.reset_index(inplace=True)
+print(df)
+df.set_index('event',inplace=True)
+print(df)
+print(df.loc['Snow'])
